@@ -1,0 +1,6 @@
+{
+  "name": "HRIS Mobile - Employee Management",
+  "description": "Aplikasi mobile modern Human Resource Information System (HRIS) untuk absensi GPS & selfie, pengajuan cuti, slip gaji digital, direktori karyawan, klaim biaya, dan ID badge karyawan.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
