@@ -4,11 +4,13 @@ import { Smartphone, Tablet, Monitor, Wifi, Battery, Signal } from 'lucide-react
 interface MobileFrameProps {
   children: React.ReactNode;
   activeStatusText?: string;
+  onOpenExpoModal?: () => void;
 }
 
 export const MobileFrame: React.FC<MobileFrameProps> = ({
   children,
   activeStatusText = 'NEXA HRIS Online',
+  onOpenExpoModal,
 }) => {
   const [deviceView, setDeviceView] = useState<'mobile' | 'tablet' | 'full'>('mobile');
 
@@ -47,9 +49,16 @@ export const MobileFrame: React.FC<MobileFrameProps> = ({
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
           <span className="font-bold text-white tracking-wide">
-            HRIS Mobile App Preview
+            HRIS Mobile App
           </span>
-          <span className="text-[11px] text-slate-400 font-mono">v2.4</span>
+          {onOpenExpoModal && (
+            <button
+              onClick={onOpenExpoModal}
+              className="px-2 py-0.5 rounded-md bg-blue-600/30 text-blue-300 hover:bg-blue-600/50 hover:text-white border border-blue-500/40 text-[10px] font-bold flex items-center gap-1 transition-colors"
+            >
+              📲 Expo Go
+            </button>
+          )}
         </div>
 
         {/* Viewport switch buttons */}

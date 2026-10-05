@@ -29,6 +29,7 @@ import { PayslipDetailModal } from './components/PayslipDetailModal';
 import { ReimbursementModal } from './components/ReimbursementModal';
 import { EmployeeDirectoryModal } from './components/EmployeeDirectoryModal';
 import { NotificationDrawer } from './components/NotificationDrawer';
+import { ExpoRunnerModal } from './components/ExpoRunnerModal';
 
 // Tabs
 import { HomeTab } from './components/tabs/HomeTab';
@@ -60,6 +61,7 @@ export default function App() {
   const [isReimbursementModalOpen, setIsReimbursementModalOpen] = useState(false);
   const [isDirectoryModalOpen, setIsDirectoryModalOpen] = useState(false);
   const [isNotificationDrawerOpen, setIsNotificationDrawerOpen] = useState(false);
+  const [isExpoModalOpen, setIsExpoModalOpen] = useState(false);
   const [selectedPayslipForModal, setSelectedPayslipForModal] = useState<Payslip | null>(null);
 
   // Success Toast state
@@ -160,6 +162,7 @@ export default function App() {
       activeStatusText={
         isClockedIn ? `Presensi: ${latestAttendance?.clockIn || '08:24'}` : 'Belum Presensi'
       }
+      onOpenExpoModal={() => setIsExpoModalOpen(true)}
     >
       {/* Toast Notification Banner */}
       {toastMessage && (
@@ -230,6 +233,7 @@ export default function App() {
                   : '👤 Mode Karyawan Diaktifkan'
               );
             }}
+            onOpenExpoModal={() => setIsExpoModalOpen(true)}
           />
         )}
       </div>
@@ -299,6 +303,12 @@ export default function App() {
         onClose={() => setIsNotificationDrawerOpen(false)}
         notifications={notifications}
         onMarkAllAsRead={handleMarkAllNotifsAsRead}
+      />
+
+      {/* 8. Expo Go Runner Modal */}
+      <ExpoRunnerModal
+        isOpen={isExpoModalOpen}
+        onClose={() => setIsExpoModalOpen(false)}
       />
     </MobileFrame>
   );

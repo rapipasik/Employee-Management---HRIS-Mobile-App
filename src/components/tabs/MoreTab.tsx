@@ -13,6 +13,7 @@ interface MoreTabProps {
   onOpenReimbursement: () => void;
   isManagerMode: boolean;
   onToggleManagerMode: () => void;
+  onOpenExpoModal?: () => void;
 }
 
 export const MoreTab: React.FC<MoreTabProps> = ({
@@ -22,6 +23,7 @@ export const MoreTab: React.FC<MoreTabProps> = ({
   onOpenReimbursement,
   isManagerMode,
   onToggleManagerMode,
+  onOpenExpoModal,
 }) => {
   const [showRosterModal, setShowRosterModal] = useState(false);
   const [showHelpModal, setShowHelpModal] = useState(false);
@@ -189,6 +191,30 @@ export const MoreTab: React.FC<MoreTabProps> = ({
             </div>
             <ChevronRight className="w-4 h-4 text-slate-400" />
           </button>
+
+          {/* Expo Go Native Launcher Item */}
+          {onOpenExpoModal && (
+            <button
+              onClick={onOpenExpoModal}
+              className="w-full p-3.5 flex items-center justify-between hover:bg-blue-50/50 transition-colors text-left bg-gradient-to-r from-blue-50/30 to-indigo-50/30"
+            >
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-xl bg-slate-900 text-white flex items-center justify-center text-xs font-bold">
+                  EX
+                </div>
+                <div>
+                  <span className="text-xs font-bold text-slate-900 block flex items-center gap-1.5">
+                    Buka di Expo Go (Native Mobile)
+                    <span className="text-[9px] bg-blue-600 text-white px-1.5 py-0.2 rounded-full font-sans font-bold">
+                      BARU
+                    </span>
+                  </span>
+                  <span className="text-[10px] text-slate-500">Petunjuk terminal & kode QR untuk HP fisik</span>
+                </div>
+              </div>
+              <ChevronRight className="w-4 h-4 text-blue-600" />
+            </button>
+          )}
         </div>
       </div>
 
