@@ -32,13 +32,13 @@ export interface Employee {
 
 export interface AttendanceRecord {
   id: string;
-  date: string; // YYYY-MM-DD
-  dayName: string;
-  clockIn: string | null; // HH:mm
-  clockOut: string | null; // HH:mm
+  date: string;
+  dayName?: string;
+  clockIn: string | null;
+  clockOut: string | null;
   status: AttendanceStatus;
-  locationName: string;
-  distanceMeter: number;
+  locationName?: string;
+  distanceMeter?: number;
   selfieUrl?: string;
   notes?: string;
   workHours?: string;
@@ -63,12 +63,6 @@ export interface LeaveRequest {
   approvedBy?: string;
   rejectionReason?: string;
   attachmentName?: string;
-}
-
-export interface PayslipItem {
-  name: string;
-  amount: number;
-  type: 'earning' | 'deduction';
 }
 
 export interface Payslip {
@@ -122,4 +116,30 @@ export interface AppNotification {
   timeAgo: string;
   read: boolean;
   type: 'attendance' | 'leave' | 'payroll' | 'announcement';
+}
+
+// Simple types for basic interface
+export interface AttendanceItem {
+  id: string;
+  date: string;
+  clockIn: string;
+  clockOut: string | null;
+  status: 'Hadir' | 'Terlambat' | 'Izin';
+}
+
+export interface LeaveItem {
+  id: string;
+  type: string;
+  startDate: string;
+  endDate: string;
+  reason: string;
+  status: 'Disetujui' | 'Menunggu';
+}
+
+export interface PayslipItem {
+  month: string;
+  basicSalary: number;
+  allowance: number;
+  deduction: number;
+  total: number;
 }

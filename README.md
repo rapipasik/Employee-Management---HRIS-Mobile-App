@@ -1,48 +1,32 @@
-# 📱 Employee Management HRIS Mobile App (NexaHR)
+# 📱 Employee Management HRIS Mobile App (Versi Basic)
 
-Aplikasi mobile Human Resource Information System (HRIS) modern untuk manajemen karyawan mandiri (Employee Self-Service), absensi berbasis biometrik wajah & radius GPS, pengajuan cuti & izin kerja, slip gaji digital resmi, kartu ID karyawan digital 3D dengan akses gerbang turnstile QR, serta klaim biaya operasional (*reimbursement*).
+Aplikasi mobile Human Resource Information System (HRIS) yang dirancang **sederhana (basic), ramah pemula, dan mudah digunakan**. Tidak rumit dengan pemindaian biometrik berlebih, aplikasi ini berfokus pada fungsi inti harian karyawan:
 
 ---
 
-## 🚀 Fitur Utama Aplikasi
+## 🚀 Fitur Utama (Sederhana & Praktis)
 
-### 1. 🕒 Presensi Masuk & Pulang (Clock-In / Clock-Out)
-- **Jam Digital Real-Time**: Penunjuk waktu akurat dalam zona WIB dengan shift reguler (08:30 – 17:30).
-- **Verifikasi Wajah Biometrik (Selfie)**: Integrasi webcam langsung / kamera ponsel dengan pemandu bingkai wajah (*face guide oval*) untuk validasi presensi.
-- **Geofence GPS**: Pengecekan radius lokasi kantor (Nexa Tower Lt. 18, SCBD Jakarta Selatan) dengan simulator lokasi (Area Kantor 14m, WFH Remote, atau Di Luar Radius 240m).
-- **Riwayat Kehadiran Harian**: Rekap waktu masuk, pulang, durasi jam kerja, dan foto biometrik saat absensi.
-- **Formulir Koreksi Presensi**: Pengajuan penyesuaian jam kerja jika lupa tap atau terkendala koneksi.
+1. **🕒 Absensi Sekali Klik (Clock In / Clock Out)**:
+   - Tombol besar untuk absen masuk & pulang dengan pencatatan waktu otomatis.
+   - Status kehadiran langsung terpantau (Sudah Masuk / Belum Absen).
+   - Riwayat absensi harian sederhana dengan jam masuk & jam pulang.
 
-### 2. 🌴 Manajemen Cuti & Izin Kerja (Leave Management)
-- **Saldo Cuti Dinamis**: Pemantauan sisa cuti tahunan, kuota cuti sakit, izin khusus (pernikahan/keluarga), dan kuota WFA (Work From Anywhere).
-- **Formulir Pengajuan Cuti**: Perhitungan otomatis durasi hari kerja dan opsi unggah surat keterangan dokter.
-- **Mode Manajer / Reviewer HR**: Opsi beralih peran untuk menyetujui (*Approve*) atau menolak (*Reject*) pengajuan cuti anggota tim secara langsung.
+2. **🌴 Pengajuan Cuti Simpel**:
+   - Menampilkan sisa jatah cuti tahunan karyawan.
+   - Form pengajuan cuti yang praktis: pilih jenis cuti, isi tanggal & alasan, lalu kirim.
+   - Daftar riwayat pengajuan dengan status (Menunggu / Disetujui).
 
-### 3. 💵 Slip Gaji Digital Resmi (Payroll & Payslips)
-- **Take Home Pay**: Ringkasan penerimaan bersih dengan tombol privasi mata (*eye toggle*) untuk menyembunyikan/menampilkan nominal.
-- **Rincian Kompensasi**: Gaji pokok, tunjangan jabatan, tunjangan makan & transport, serta bonus kinerja.
-- **Potongan Resmi Regulasi Indonesia**:
-  - BPJS Ketenagakerjaan (Jaminan Hari Tua & Jaminan Pensiun)
-  - BPJS Kesehatan (Iuran wajib 1%)
-  - Pajak Penghasilan (PPh 21 TER)
-- **Cetak & Unduh Dokumen**: Tampilan slip gaji berstempel digital resmi dan tombol cetak/simpan PDF.
+3. **💵 Slip Gaji Jelas**:
+   - Informasi penerimaan gaji bersih (Take Home Pay) yang langsung terbaca.
+   - Rincian gaji pokok, tunjangan, potongan (BPJS/Pajak), dan total gaji bersih.
 
-### 4. 🪪 Kartu ID Badge Digital Karyawan (Digital ID Card)
-- **Kartu Identitas 3D Interaktif**: Animasi putar balik kartu (*flip card*) antara tampak depan dan tampak belakang.
-- **Akses Gerbang Turnstile**: Kode QR dinamis dan Barcode untuk verifikasi akses gedung kantor.
-- **Informasi Lengkap**: Nomor Induk Karyawan (`EMP-2022-042`), golongan darah, tanggal bergabung, status karyawan, dan indikator chip NFC.
+4. **👥 Daftar Kontak Rekan Tim**:
+   - Informasi nama dan divisi rekan kerja satu kantor.
+   - Tombol pintas untuk langsung menghubungi via WhatsApp.
 
-### 5. 👥 Direktori Karyawan & Rekan Tim
-- Pencarian cepat rekan kerja berdasarkan nama, jabatan, atau divisi.
-- Integrasi tombol pintas untuk langsung mengirim pesan **WhatsApp** atau **Email** ke rekan kerja.
-
-### 6. 🧾 Klaim Biaya Operasional (Reimbursement)
-- Pengajuan klaim kategori Transport (taksi/GrabCar), Medis/Kesehatan, Internet & Pulsa WFH, dan Konsumsi Bisnis.
-- Pratinjau status pengajuan (*Pending*, *Disetujui*, *Ditolak*) dan total klaim tahun berjalan.
-
-### 7. 📱 Antarmuka Mobile Adaptif
-- Tampilan bingkai ponsel (*iPhone 16 Pro mockup*) dengan *Dynamic Island* aktif dan *Status Bar*.
-- Tombol pengganti *viewport* di bilah atas untuk menguji tampilan dalam skala **Mobile (390px)**, **Tablet (540px)**, atau **Full Screen**.
+5. **📱 Tersedia Versi Web & Expo Mobile**:
+   - **Versi Web**: Buka di browser dengan tampilan mobile yang bersih.
+   - **Versi Expo Native**: Disediakan di folder `/expo-app` siap dibuka di HP dengan aplikasi **Expo Go**.
 
 ---
 
